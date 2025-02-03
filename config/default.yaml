@@ -1,0 +1,24 @@
+# Config dataset for yolo model
+model: yolov8 # [yolov8, yolov10]
+mode: yolo  #[yolo, coco]
+weight: yolov8m.pt
+
+cfg_file: ./config/datasets/default.yaml
+
+src_dir: ./daytime  #original folder contains data
+dataset_dir: ./datasets
+img_dir: ./datasets/daytime/images
+txt_dir: ./datasets/daytime/annotations
+directory_path: daytime
+
+k_folds: 5
+kfolds_dir: ./datasets/kfolds
+drop_boxes: 350
+
+# Train Hyperparameters
+imgsz: 640
+batch: 16
+epochs: 20
+# lr:
+
+output_dir: ./outputs
