@@ -37,6 +37,10 @@ Objects with extreme sizes are harder to detect and track, especially under low-
     <img src="./images/pixel-intensity-05.png" alt="">
 </div>
 
+<div align="center">
+    <img src="./images/Area.png" alt="">
+</div>
+
 ---
 
 ### ⚖️ Data Imbalance  
