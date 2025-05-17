@@ -5,8 +5,8 @@ import yaml
 import shutil
 from sklearn.model_selection import KFold
 from utils.data_config import setup_parse, update_config
-from utils.convert import convert_yolo_to_coco, convert_yolo_to_xy
-from utils.create_json import yolo_to_coco
+from utils.crop_image import convert_yolo_to_coco, convert_yolo_to_xy
+from utils.preprocessing import yolo_to_coco
 import datetime
 import json
 

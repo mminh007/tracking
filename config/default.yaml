@@ -1,24 +1,26 @@
 # Config dataset for yolo model
-model: yolov8 # [yolov8, yolov10]
+model: yolo11m # [yolov8, yolov11]
 mode: yolo  #[yolo, coco]
-weight: yolov8m.pt
+weight: yolo11m.pt
 
-cfg_file: ./config/datasets/default.yaml
+cfg_file: ./config/default.yaml
 
-src_dir: ./daytime  #original folder contains data
-dataset_dir: ./datasets
-img_dir: ./datasets/daytime/images
-txt_dir: ./datasets/daytime/annotations
-directory_path: daytime
-
-k_folds: 5
-kfolds_dir: ./datasets/kfolds
-drop_boxes: 350
-
+directory_path: nighttime
+max_per_class: 100
+n_folds: 5
+kfolds_dir: kfolds
+selected_classes: ['bus', 'truck']
+objects_lib_dir: objects_lib
+class_name: ['motorcycle', 'car', 'bus', 'truck']
 # Train Hyperparameters
 imgsz: 640
 batch: 16
 epochs: 20
+num_workers: 4
+lr: 0.001
+
+debug: false
+use_kfolds: true
 # lr:
 
 output_dir: ./outputs

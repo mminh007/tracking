@@ -10,21 +10,25 @@ def setup_parse():
     parser.add_argument("--weight", type=str)
     parser.add_argument("--cfg-file", type=str)
     
-    parser.add_argument("--dataset-dir", type=str)
-    parser.add_argument("--src-dir", type=str)
-    parser.add_argument("--img-dir", type=str)
-    parser.add_argument("--txt-dir", type=str)
-
-    parser.add_argument("--kfolds-dir", type=str)
     parser.add_argument("--directory-path", type=str)
-    parser.add_argument("--k-folds", type=int)
-    parser.add_argument("--drop-boxes", type=int)
+    parser.add_argument("--max-per-class", type=int)
+
+    parser.add_argument("--n-folds", type=int)
 
     parser.add_argument("--imgsz", type=int)
     parser.add_argument("--batch", type=int)
     parser.add_argument("--epochs",type=int)
 
     parser.add_argument("--output-dir", type=str)
+    parser.add_argument("--class-name", nargs='+', type=str, default=['motorcycle', 'car', 'bus', 'truck'])
+    parser.add_argument("--selected_classes", nargs='+', type=str, default=["bus", "truck"])
+    parser.add_argument("--objects-lib-dir", type=str, default="objects_lib")
+    parser.add_argument("--use-kfolds", action="store_true")
+    parser.add_argument("--num-workers", type=int, default=4)
+    parser.add_argument("--lr", type=float, default=0.001)
+    parser.add_argument("--kfolds-dir", type=str, default="kfolds")
+    parser.add_argument("--debug", action="store_false")
+
     
     return parser
 
