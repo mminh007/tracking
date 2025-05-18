@@ -13,7 +13,7 @@ selected_classes: ['bus', 'truck']
 objects_lib_dir: objects_lib
 class_name: ['motorcycle', 'car', 'bus', 'truck']
 # Train Hyperparameters
-imgsz: 640
+imgsz: 1024
 batch: 16
 epochs: 20
 num_workers: 4
